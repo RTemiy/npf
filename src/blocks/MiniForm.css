@@ -1,0 +1,38 @@
+.mini-form__container{
+  grid-column: 2;
+  grid-row: 1/-1;
+  width: 500px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.mini-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: white;
+  box-shadow: 0 0 15px black;
+  padding: 50px;
+  margin: 0 0 0 50px;
+  border-radius: 15px;
+}
+
+.mini-form__title{
+  text-align: center;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 45px;
+}
+
+.mini-form__input{
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.mini-form__button{
+  font-weight: 600;
+  font-size: x-large;
+  padding: 25px;
+}

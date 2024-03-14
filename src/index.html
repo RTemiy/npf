@@ -1,72 +1,328 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="icon" type="image/png" href=<%=require("./images/icon.png")%>/>
     <meta charset="UTF-8">
-    <title>Натяжные потолки</title>
+    <meta name="description" content="Осуществляем монтаж натяжных потолков и не только!">
+    <meta name="keywords" content="потолки, монтаж, натяжные потолки, светильник, замер">
+    <meta property="og:title" content="Потолочные мастера">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="потолочные-мастера.рф">
+    <meta property="og:image" content=<%=require("./images/about/04.jpg")%>>
+    <title>Потолочные мастера</title>
 </head>
 <body>
 <header class="header">
+    <div class="header__info">
+        <img class="header__logo" alt="Логотип" src=<%=require("./images/ui/logo.png")%>>
+        <div class="header__info-block">
+            <p class="header__paragraph">Москва и Московская область</p>
+        </div>
+        <button class="header__disc-button toFormButton">Бесплатный замер</button>
+        <div class="header__info-container">
+            <div class="header__info-block">
+                <a href="https://t.me/Abremontt"><img class="icon" alt="Телеграм" src=<%=require("./images/ui/tg.png")%>></a>
+                <!--<a href="https://wa.me/79779348692"><img class="icon" alt="Ватсап" src=<%=require("./images/ui/wp.png")%>></a>-->
+                <div class="header__telephones-block">
+                    <a href="tel:84952080909" class="header__link telephone">8 (495) 208-09-09</a>
+                    <a href="tel:89268026929" class="header__link telephone">8 (926) 802-69-29</a>
+                </div>
+            </div>
+            <div class="header__info-block">
+                <p>Ежедневно </p>
+                <p>с 9:00 до 19:00</p>
+            </div>
+        </div>
+    </div>
     <nav class="header__navigation">
         <ul class="header__list">
-            <li class="header__list-item">Акции</li>
-            <li class="header__list-item">Портфолио</li>
-            <li class="header__list-item">Калькулятор</li>
-            <li class="header__list-item">Отзывы</li>
-            <li class="header__list-item">О компании</li>
-            <li class="header__list-item">Контакты</li>
+            <li class="header__list-item"><a class="header__list-link" href="#about">О компании</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#catalog">Каталог</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#feedback">Наши работы</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#discounts">Акции</a></li>
         </ul>
     </nav>
-
 </header>
-
 <main>
-    <section class="section">
-        <h1 class="section__header">Лид</h1>
-        <article>
-            Сразу указать акции и рядом форму для заполнения (вместе с калькулятором)
+    <section class="section lead">
+        <article class="lead__discount">
+            <h2 class="lead__discount-title">Натяжные потолки со скидкой 45%</h2>
+            <p class="lead__discount-paragraph">При заказе двух потолков - третий в подарок</p>
+            <button class="lead__discount-button toFormButton">Заказать со скидкой</button>
         </article>
+        <div class="disc-form__container">
+            <form name="lead" class="disc-form">
+                <h2 class="disc-form__title">Расчет стоимости</h2>
+                <div class="disc-form__input-block">
+                    <label class="disc-form__label">Площадь потолка</label>
+                    <input name="area" class="disc-form__input" minlength="1" value="5" type="number"/>
+                </div>
+                <div class="disc-form__input-block">
+                    <label class="disc-form__label">Точек освещения</label>
+                    <input name="lights" class="disc-form__input" minlength="1" value="2" type="number"/>
+                </div>
+                <div class="disc-form__input-block">
+                    <label class="disc-form__label">Ваше имя</label>
+                    <input name="name" class="disc-form__input" minlength="2" maxlength="15" type="text"/>
+                </div>
+                <div class="disc-form__input-block">
+                    <label class="disc-form__label">Укажите ваш телефон</label>
+                    <input name="tel" class="disc-form__input" required minlength="11" maxlength="11" type="tel"/>
+                </div>
+                <div class="disc-form__input-block">
+                    <p>Минимальная цена для вас: <span id="specialCost">цена</span></p>
+                </div>
+                <button class="disc-form__button">Отправить заявку</button>
+            </form>
+        </div>
     </section>
-    <section class="section">
-        <h2 class="section__header">Акции</h2>
-        <article>
-            Указать все имеющиеся акции
-        </article>
-    </section>
-    <section class="section">
-        <h2 class="section__header">Портфолио</h2>
-        <article>
-            Фото красивых работ с кратким описанием и ценой
-        </article>
-    </section>
-    <section class="section">
-        <h2 class="section__header">Калькулятор</h2>
-        <article>
-            Калькулятор цены (возможно не нужен будет, так как он будет рядом с формой заявки)
-        </article>
-    </section>
-    <section class="section">
-        <h2 class="section__header">Отзывы</h2>
-        <article>
-            Живые красиво оформленные отзывы
-        </article>
-    </section>
-    <section class="section">
+    <section id="about" class="section about">
         <h2 class="section__header">О компании</h2>
-        <article>
-            Описание компании
+        <article class="about__article">
+            <h3 class="about__title">Мы — “Потолочные мастера”. Осуществляем монтаж натяжных потолков по вашему видению</h3>
+            <div class="small-gallery">
+                <img class="small-gallery__image" src=<%=require("./images/about/01.jpg")%>>
+                <img class="small-gallery__image" src=<%=require("./images/about/02.jpg")%>>
+                <img class="small-gallery__image" src=<%=require("./images/about/03.jpg")%>>
+                <img class="small-gallery__image" src=<%=require("./images/about/04.jpg")%>>
+            </div>
+            <p class="about__paragraph">
+                За десять лет на рынке нам удалось создать команду из лучших специалистов, которые безошибочно справляются со своей работой.
+                Мы готовы воплотить ваши идеи дизайна интерьера, используя наилучшие материалы со своего производства по доступной цене
+            </p>
         </article>
+        <div class="why">
+            <h3 class="section__header">Преимущества работы с нами</h3>
+            <div class="why__container">
+                <article class="why__block">
+                    <h4 class="why__block-title">Безопасность</h4>
+                    <p class="why__paragraph">Использование в работе только экологичных и сертифицированных материалов</p>
+                    <img class="why__image" alt="иконка" src=<%=require("./images/ui/master.svg")%>>
+                </article>
+                <article class="why__block">
+                    <h4 class="why__block-title">Оборудование</h4>
+                    <p class="why__paragraph">Пользуемся только качественным современным оборудованием</p>
+                    <img class="why__image" alt="иконка" src=<%=require("./images/ui/machine.svg")%>>
+                </article>
+                <article class="why__block">
+                    <h4 class="why__block-title">Дизайн</h4>
+                    <p class="why__paragraph">Безошибочно реализуем идеи заказчика, учитывая специфику помещения</p>
+                    <img class="why__image" alt="иконка" src=<%=require("./images/ui/warranty.svg")%>>
+                </article>
+                <article class="why__block">
+                    <h4 class="why__block-title">Материалы</h4>
+                    <p class="why__paragraph">Все материалы мы берем на собственном производстве</p>
+                    <img class="why__image" alt="иконка" src=<%=require("./images/ui/material.svg")%>>
+                </article>
+                <article class="why__block">
+                    <h4 class="why__block-title">Замер</h4>
+                    <p class="why__paragraph">Выезд специалиста можно бесплатно заказать здесь и сейчас</p>
+                    <img class="why__image" alt="иконка" src=<%=require("./images/ui/measure.svg")%>>
+                </article>
+            </div>
+        </div>
+        <div class="master">
+            <div class="how__master">
+                <h3 class="section__header">Как мы работаем</h3>
+                <div class="how">
+                    <div class="how__container">
+                        <article class="how__block">
+                            <h4 class="how__paragraph-title">1. Оформление заявки</h4>
+                            <p class="how__paragraph">Оставьте свои данные в форме на сайте или позвоните сейчас. Наши менеджеры свяжутся с вами</p>
+                        </article>
+                        <article class="how__block">
+                            <h4 class="how__paragraph-title">2. Замер объекта</h4>
+                            <p class="how__paragraph">Замерщик приезжает к вам бесплатно и обсуждает проект дизайна</p>
+                        </article>
+                        <article class="how__block">
+                            <h4 class="how__paragraph-title">3. Заключение договора</h4>
+                            <p class="how__paragraph">Подписание договора и начало нашего производства</p>
+                        </article>
+                        <article class="how__block">
+                            <h4 class="how__paragraph-title">4. Монтажные работы</h4>
+                            <p class="how__paragraph">Работа над полотном, установка потолка в обозначенные сроки</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="amount">
+                    <div class="amount__container">
+                        <div class="amount__block">
+                            <p class="amount__paragraph">Запланировали замеров</p>
+                            <p id="v1" class="amount__number">Загрузка</p>
+                        </div>
+                        <div class="amount__block">
+                            <p class="amount__paragraph">Замеров сделали</p>
+                            <p id="v2" class="amount__number">Загрузка</p>
+                        </div>
+                        <div class="amount__block">
+                            <p class="amount__paragraph">Запланировали монтажей</p>
+                            <p id="v3" class="amount__number">Загрузка</p>
+                        </div>
+                        <div class="amount__block">
+                            <p class="amount__paragraph">Монтажей сделали</p>
+                            <p id="v4" class="amount__number">Загрузка</p>
+                        </div>
+                        <div class="amount__block">
+                            <p class="amount__paragraph">Запланировали замеров на завтра</p>
+                            <p id="v5" class="amount__number">Загрузка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="mini-form__container">
+                    <form name="mini" class="mini-form">
+                        <h4 class="mini-form__title">Бесплатный звонок!</h4>
+                        <input name="tel" class="mini-form__input" required type="tel" minlength="11" maxlength="11" placeholder="Ваш номер телефона">
+                        <input name="name" class="mini-form__input" type="tel" minlength="2" maxlength="12" placeholder="Ваше имя">
+                        <button class="mini-form__button" type="submit">Заказать звонок</button>
+                    </form>
+                </div>
+        </div>
     </section>
-    <section class="section">
-        <h2 class="section__header">Контакты</h2>
-        <article>
-            Указать соц сети и геолокацию
-        </article>
+    <section id="catalog" class="section catalog">
+        <h2 class="section__header">Каталог</h2>
+        <h3 class="catalog__header">Виды натяжных потолков</h3>
+        <div class="catalog__list">
+            <!--<article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/colored.jpg")%>>
+                <h4 class="catalog__title">Цветной</h4>
+                <p class="catalog__description">Разнообразная цветовая палитра полотен на ваш вкус</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>-->
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/glossy.jpg")%>>
+                <h4 class="catalog__title">Глянцевый</h4>
+                <p class="catalog__description">Гладкая, блестящая поверхность, которая визуально увеличивает помещение</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/mat.jpg")%>>
+                <h4 class="catalog__title">Матовый</h4>
+                <p class="catalog__description">Прочное и практичное покрытие с шероховатой фактурой</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/satin.jpg")%>>
+                <h4 class="catalog__title">Сатиновый</h4>
+                <p class="catalog__description">Перламутровый блеск мягко рассеивает свет, придавая камерность помещению</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+        </div>
+        <h3 class="catalog__header">Технологии натяжных потолков</h3>
+        <div class="catalog__list">
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/two.jpg")%>>
+                <h4 class="catalog__title">Двухуровневый</h4>
+                <p class="catalog__description">Возможность комбинировать разные фактуры, формы и цвета полотна</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/photo.jpg")%>>
+                <h4 class="catalog__title">Фотопечать</h4>
+                <p class="catalog__description">Реализация любых ваших идей: от цветочной поляны до абстрактных фигур</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/shadowed.jpg")%>>
+                <h4 class="catalog__title">Теневой</h4>
+                <p class="catalog__description">Теневой зазор — стильное и современное решение примыкания потолка к стене</p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+            <article class="catalog__block">
+                <img alt="Фотография потолка" class="catalog__photo" src=<%=require("./images/catalog/floating.jpg")%>>
+                <h4 class="catalog__title">Парящий</h4>
+                <p class="catalog__description">Свечение, что создает ощущение, будто поверхность не касается стен </p>
+                <button type="button" class="catalog__button toFormButton">Заказать</button>
+            </article>
+        </div>
+    </section>
+    <section id="feedback" class="section feedback">
+        <h2 class="section__header">Наши работы</h2>
+        <div class="feedback__container">
+            <article class="feedback__block">
+                <div class="feedback__text-block">
+                    <h3 class="feedback__block-header">Двухуровневый потолок с подсветкой</h3>
+                    <button type="button" class="feedback__button toFormButton">Хочу также</button>
+                </div>
+                <img class="feedback__image" src=<%=require("./images/feedback/01.jpg")%>>
+            </article>
+            <article class="feedback__block">
+                <div class="feedback__text-block">
+                    <h3 class="feedback__block-header">Двухуровневый потолок с эффектом исчезающего рисунка</h3>
+                    <button type="button" class="feedback__button toFormButton">Хочу также</button>
+                </div>
+                <img class="feedback__image" src=<%=require("./images/feedback/02.jpg")%>>
+            </article>
+            <article class="feedback__block">
+                <div class="feedback__text-block">
+                    <h3 class="feedback__block-header">Ниша для штор с подсветкой</h3>
+                    <button type="button" class="feedback__button toFormButton">Хочу также</button>
+                </div>
+                <img class="feedback__image" src=<%=require("./images/feedback/03.jpg")%>>
+            </article>
+            <article class="feedback__block">
+                <div class="feedback__text-block">
+                    <h3 class="feedback__block-header">3D панель со встроенной подсветкой в потолке</h3>
+                    <button type="button" class="feedback__button toFormButton">Хочу также</button>
+                </div>
+                <img class="feedback__image" src=<%=require("./images/feedback/04.jpg")%>>
+            </article>
+            <article class="feedback__block">
+                <div class="feedback__text-block">
+                    <h3 class="feedback__block-header">Встроенные треки с линейными светильниками</h3>
+                    <button type="button" class="feedback__button toFormButton">Хочу также</button>
+                </div>
+                <img class="feedback__image" src=<%=require("./images/feedback/05.jpg")%>>
+            </article>
+        </div>
+    </section>
+    <section id="discounts" class="section discounts">
+        <h2 class="section__header">Акции</h2>
+        <div class="discounts__container">
+            <article class="discounts__block toFormButton">
+                <h3 class="discounts__title">Светильник в подарок</h3>
+                <p class="discounts__paragraph">При заказе двух потолков светильник в подарок</p>
+                <img alt="Фоновое изображение акции" class="discounts__image" src=<%=require("./images/discounts/01.jpg")%>>
+            </article>
+            <article class="discounts__block toFormButton">
+                <h3 class="discounts__title">Telegram</h3>
+                <p class="discounts__paragraph">При первом заказе в Telegram скидка 20%</p>
+                <img alt="Фоновое изображение акции" class="discounts__image" src=<%=require("./images/discounts/02.jpg")%>>
+            </article>
+            <article class="discounts__block toFormButton">
+                <h3 class="discounts__title">Потолок в подарок</h3>
+                <p class="discounts__paragraph">При заказе всей квартиры потолок в подарок</p>
+                <img alt="Фоновое изображение акции" class="discounts__image" src=<%=require("./images/discounts/03.jpg")%>>
+            </article>
+            <article class="discounts__block toFormButton">
+                <h3 class="discounts__title">Скидка пенсионерам</h3>
+                <p class="discounts__paragraph">Пенсионерам скидка 40% на первый заказ</p>
+                <img alt="Фоновое изображение акции" class="discounts__image" src=<%=require("./images/discounts/04.jpg")%>>
+            </article>
+            <article class="discounts__block toFormButton">
+                <h3 class="discounts__title">Приводи друга</h3>
+                <p class="discounts__paragraph">Порекомендуйте нас свои знакомым и получите скидку 10%</p>
+                <img alt="Фоновое изображение акции" class="discounts__image" src=<%=require("./images/discounts/05.jpg")%>>
+            </article>
+        </div>
     </section>
 </main>
-
+<div class="popup popup_hide">
+    <form name="order" class="popup__container">
+        <label class="popup__label">Заказать бесплатный звонок</label>
+        <input class="popup__text-input" name="tel" required type="tel" minlength="11" maxlength="11" placeholder="Ваш номер телефона">
+        <input class="popup__text-input" name="name" type="text" minlength="2" maxlength="12" placeholder="Ваше имя">
+        <button name="buttonSend" class="popup__button" type="submit">Отправить заявку</button>
+        <button name="buttonClose" class="popup__button-close" type="button">×</button>
+    </form>
+</div>
+<div class="status-popup">
+    <div class="status-popup__container">
+        <p class="status-popup__text"></p>
+        <p class="status-popup__emoji"></p>
+    </div>
+</div>
 <footer>
-    
 </footer>
-
 </body>
 </html>

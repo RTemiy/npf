@@ -1,13 +1,80 @@
+@import "./vendor/fonts/inter/inter.css";
 @import "./blocks/Header.css";
 @import "./blocks/Section.css";
+@import "./blocks/About.css";
+@import "./blocks/Lead.css";
+@import "./blocks/DiscForm.css";
+@import "./blocks/SmallGallery.css";
+@import "./blocks/Catalog.css";
+@import "./blocks/How.css";
+@import "./blocks/Feedback.css";
+@import "./blocks/Amount.css";
+@import "./blocks/Why.css";
+@import "./blocks/Discounts.css";
+@import "./blocks/MiniForm.css";
+@import "./blocks/StatusPopup.css";
 
-ul{
+@import "./blocks/Popup.css";
+
+*{
+  --mainColor: #2da1b7;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+p,h1,h2,h3,h4,h5,h6,a,ul,li,body{
+  padding: 0;
+  margin: 0;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  text-decoration: none;
+  color: unset;
 }
 
-li{
-  padding: 0;
-  margin: 0;
+button{
+  border: 0;
+  background-color: white;
+  box-shadow: 0 0 10px white, inset -1px 2px 5px black;
+  background-size: 250px;
+  border-radius: 25px;
+  transition: all .2s ease-in-out ;
 }
+
+button:hover{
+  box-shadow: 0 0 10px #383838, inset 0 0 2px black;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px white;
+  margin: 5px;
+}
+
+.telephone{
+  font-size: x-large;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 1402px) {
+  .telephone{
+    font-size: large;
+  }
+}
+
+@media (max-width: 1200px) {
+  .telephone{
+    font-size: medium;
+  }
+}
+
+.telephone > p {
+  font-size: medium;
+  font-weight: 500;
+  text-align: center;
+}
+

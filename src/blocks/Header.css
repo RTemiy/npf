@@ -1,5 +1,71 @@
 .header{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 3;
+  font-size: x-large;
+}
 
+.header__info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 45px;
+}
+
+@media (max-width: 981px) {
+  .header__info{
+    gap: 25px;
+  }
+}
+
+.header__logo{
+  height: 100px;
+}
+
+.header__header{
+
+}
+
+.header__info-container{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  background-image: url("../images/ui/stain.png");
+  background-size: 350px 100px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.header__info-block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__info-block:last-child{
+  flex-direction: column;
+  text-shadow: 0 0 5px white;
+  font-size: 15px;
+}
+
+.header__paragraph{
+  width: min-content;
+}
+
+.header__link{
+  text-shadow: 0 0 5px white;
+}
+
+.header__button{
+  height: 35px;
+  padding: 10px;
 }
 
 .header__navigation{
@@ -7,18 +73,32 @@
 }
 
 .header__list{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   gap: 15px;
   justify-content: space-evenly;
   align-items: center;
-  background-color: green;
+  padding: 10px;
+  background-color: rgba(100, 149, 237, 0.6);
+  font-weight: 600;
 }
 
 .header__list-item{
 
+}
+
+.header__list-link{
+
+}
+
+.header__telephones-block{
+  display: flex;
+  flex-direction: column;
+}
+
+.header__disc-button{
+  padding: 20px;
+  font-size: large;
+  font-weight: 600;
+  text-transform: uppercase;
 }

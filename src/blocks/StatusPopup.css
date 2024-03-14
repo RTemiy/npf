@@ -1,0 +1,46 @@
+.status-popup{
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
+  z-index: 15;
+}
+
+.status-popup_show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.status-popup__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 0 15px black;
+}
+
+.status-popup__text{
+  font-size: x-large;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.status-popup__emoji{
+  font-size: xxx-large;
+  text-align: center;
+  border-radius: 100px;
+}

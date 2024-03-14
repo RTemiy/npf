@@ -1,0 +1,53 @@
+.master{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.how__master{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.how{
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.how__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 25px;
+}
+
+.how__block{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 3px 5px 15px black;
+  font-size: larger;
+  width: 400px;
+}
+
+.how__paragraph-title{
+  border-bottom: 2px solid black;
+  font-size: xx-large;
+  text-align: left;
+}
+
+.how__paragraph{
+  font-size: x-large;
+  text-align: left;
+}

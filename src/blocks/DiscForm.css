@@ -1,0 +1,49 @@
+.disc-form__container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.disc-form{
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  color: white;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px white;
+}
+
+.disc-form__title{
+  text-align: center;
+  padding-bottom: 3px;
+  border-bottom: 1px solid white;
+  font-size: 45px;
+}
+
+.disc-form__input-block{
+  display: flex;
+  flex-direction: column;
+}
+
+.disc-form__label{
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.disc-form__input{
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.disc-form__button{
+  font-weight: 600;
+  font-size: x-large;
+  padding: 15px;
+}
